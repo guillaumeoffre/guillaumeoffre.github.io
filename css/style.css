@@ -1,0 +1,98 @@
+nav > div {
+  max-width: 1140px;
+}
+
+.skills-border article {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.certificate-timeline-item {
+  position: relative;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.experience-main-timeline {
+  position: relative;
+  background-color: #f0f2f5;
+  border-radius: 5px;
+}
+
+.experience-main-timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #939597;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.experience-timeline {
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.experience-timeline::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -13px;
+  background-color: #939597;
+  border: 5px solid #f5df4d;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.experience-left {
+  padding: 0px 40px 20px 0px;
+  left: 0;
+}
+
+.experience-right {
+  padding: 0px 0px 20px 40px;
+  left: 50%;
+}
+
+.experience-right::after {
+  left: -12px;
+}
+
+@media screen and (max-width: 600px) {
+  .experience-main-timeline::after {
+    left: 13px;
+  }
+
+  .experience-timeline {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 25px;
+  }
+
+  .experience-timeline::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  .experience-left::after,
+  .experience-right::after {
+    left: 18px;
+  }
+
+  .experience-left::before {
+    right: auto;
+  }
+
+  .experience-right {
+    left: 0%;
+  }
+}
